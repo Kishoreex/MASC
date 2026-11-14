@@ -1,13 +1,22 @@
-# Deploy only the public site. Everything else (README, image tools, original photos,
-# notes and backups) stays out of the upload.
-/*
-!/index.html
-!/about.html
-!/academics.html
-!/campus-life.html
-!/contact.html
-!/assets
 
+# Exclude development and unnecessary files
+# Keep all website HTML, CSS, JS and images deployable
+
+.git/
+.github/
+.gitignore
+README.md
+
+# Development tools and backend source
+/tools/
+/backend/
+
+# Original and backup assets
 /assets/img/originals/
 /assets/**/*.txt
 /assets/**/* bkup.*
+
+# Local development files
+node_modules/
+.env
+.env.*
