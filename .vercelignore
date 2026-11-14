@@ -11,10 +11,7 @@ README.md
 /tools/
 /backend/
 
-# Original and backup assets
-/assets/img/originals/
-/assets/**/*.txt
-/assets/**/* bkup.*
+
 
 # Local development files
 node_modules/
