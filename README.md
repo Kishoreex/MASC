@@ -16,11 +16,27 @@ python -m http.server 8000
 
 | File | Contents | Replaces (old site) |
 |---|---|---|
-| `index.html` | Hero, key facts, about, programme finder, principal's message, admissions, campus life, recent events, Madha Group | Home |
-| `about.html` | The college, mission statement & values, Madha Group + sister institutions, management team, principal's full message | About Us menu (5 pages) |
+| `index.html` | Hero, key facts, about, programme finder, admissions, recent events, campus visit CTA | Home |
+| `about.html` | Links to the college, mission statement, management team and Principal's Office | About Us |
+| `college.html` | College overview, mission and values, campus and learning | The College |
+| `mission.html` | Mission statement and college values | Mission Statement |
+| `group.html` | Madha Group and sister institutions | Madha Group |
+| `leadership.html` | Madha Group management team | Management Team |
+| `principal.html` | Principal's welcome message | Principal's Office |
 | `academics.html` | All 9 programmes with filters, career training & field visits, UG/PG admission criteria, how to apply | Admissions, Courses |
+| `departments.html` | Department directory with links to individual department pages | Departments |
+| `department-commerce.html` | B.Com and M.Com department overview | Commerce |
+| `department-business-administration.html` | B.B.A department overview | Business Administration |
+| `department-computer-applications.html` | B.C.A department overview | Computer Applications |
+| `department-computer-science.html` | B.Sc Computer Science department overview | Computer Science |
+| `department-biotechnology.html` | B.Sc Biotechnology department overview | Biotechnology |
+| `department-mathematics.html` | B.Sc Mathematics department overview | Mathematics |
+| `department-english.html` | B.A English department overview | English |
+| `department-hotel-catering-management.html` | B.Sc Hotel & Catering Management department overview | Hotel & Catering Management |
 | `campus-life.html` | Recent events, photo gallery with lightbox, social outreach | Gallery (was empty) |
 | `contact.html` | Address, phone, emails, map | Contact Us |
+
+About topics open as separate pages. Academics is a direct top-level navigation link. Departments follows Academics in the top navigation; its dropdown links to each department page.
 
 ```
 assets/css/styles.css      design system + all components
@@ -59,17 +75,14 @@ It runs on CPU in about 10 minutes.
 The home page "About the college" image is `campus-foyer.jpg`, the length of the main block foyer (`mainblockentrance3.jpeg`), enhanced to 1600px.
 The door signs and the painted captions on both walls are small, so each is covered by a protect box and keeps the plain resample.
 
-The About page header uses `campus-entrance.jpg` instead: staff and students in the main block entrance hall, supplied as a single 1280px photo (`mainblockentrance0.jpeg`).
-Because it fills the full page width, it is AI-enhanced like the Campus Life header: `tools/enhance_images.py` upscales it to 2000px with `realesr-general-x4v3` at half strength and a light grade.
-The faces and the painted college sign on the back wall were compared against a plain resample and are unchanged apart from being sharper.
+The About landing page and its standalone information pages use individual navy-and-gold gradient headers instead of a shared photo.
 
 The Academics page header uses `campus-mural.jpg`, the painted mural wall in the same entrance hall (`mainblockentrance1.jpeg`), enhanced the same way from a 1040px photo.
 Its captions — "Knowledge is power", the framed college name, the Tamil plaque and "Study, strive, shine" — are each covered by a protect box, so the AI cannot reshape that lettering.
 
 The image beside "Two decades of wholesome education" on the About page is `campus-mural-stairway.jpg`, the "Learn, grow, succeed" stairway mural (`mainblockentrance4.jpeg`), enhanced to 1400px with the painted words protected.
 
-Both of these headers carry `page-hero--flat`, which drops the blurred patch that normally sits behind the header text.
-Without it the photo is unclouded, and the scrim alone keeps the text legible: measured over the glyph pixels, the worst case is 5.0:1 on Academics and 5.4:1 on About.
+The Academics header carries `page-hero--flat`, which drops the blurred patch behind the header text. The scrim keeps the text legible over the photo.
 
 ### Phone copies of the gallery photos
 
