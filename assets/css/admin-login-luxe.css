@@ -1,0 +1,469 @@
+
+/* ==========================================
+   MADHA — LUXURY ANIMATED STAFF LOGIN
+   ========================================== */
+
+body.admin-portal {
+    background: #f8f5ee;
+    min-height: 100vh;
+}
+
+/* Reduce header size */
+body.admin-portal .site-header {
+    background: #fffdf9 !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #e9e0d2;
+}
+
+body.admin-portal .admin-shell {
+    max-width: 1100px;
+    margin: 40px auto 70px;
+    padding: 0 22px;
+}
+
+/* Hide old oversized introduction on login */
+body.admin-portal:has(
+    #adminLogin:not(.admin-hidden)
+) .admin-shell > .eyebrow,
+body.admin-portal:has(
+    #adminLogin:not(.admin-hidden)
+) .admin-shell > h1,
+body.admin-portal:has(
+    #adminLogin:not(.admin-hidden)
+) .admin-shell > .admin-lead {
+    display: none;
+}
+
+/* Main premium card */
+body.admin-portal #adminLogin:not(.admin-hidden) {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    grid-template-rows: auto;
+
+    max-width: 940px;
+    min-height: 470px;
+    margin: 35px auto 0;
+    padding: 0;
+
+    overflow: hidden;
+    border: 1px solid #e8ddca;
+    border-radius: 24px;
+    background: #fffdf9;
+
+    box-shadow:
+        0 30px 75px rgba(20,35,60,.11),
+        0 5px 15px rgba(20,35,60,.04);
+
+    animation: luxeCardEnter .8s
+        cubic-bezier(.22,1,.36,1) both;
+}
+
+/* Remove previous CSS decorative panel */
+body.admin-portal #adminLogin::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* ===== LEFT PANEL ===== */
+
+.login-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(145deg,#0b1930,#1b3150);
+    color: white;
+    padding: 48px 38px;
+    isolation: isolate;
+}
+
+.login-visual__content {
+    position: relative;
+    z-index: 2;
+}
+
+.login-symbol {
+    width: 66px;
+    height: 66px;
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.16);
+    margin-bottom: 34px;
+
+    animation: luxeFloat 5s ease-in-out infinite;
+}
+
+.login-symbol img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.login-visual__eyebrow {
+    color: #e5bb6b;
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .17em;
+    margin-bottom: 17px;
+}
+
+.login-visual h2 {
+    color: white;
+    font-family: Newsreader,Georgia,serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem,3.7vw,3.8rem);
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    margin: 0 0 22px;
+}
+
+.login-visual h2 em {
+    display: block;
+    color: #e4b862;
+    font-weight: 400;
+}
+
+.login-visual__description {
+    color: #c8d3e0;
+    font-size: .93rem;
+    line-height: 1.85;
+    max-width: 290px;
+}
+
+.login-visual__footer {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 50px;
+    color: #ddbb77;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+/* Animated status dot */
+.login-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e7b75c;
+    box-shadow: 0 0 0 4px rgba(231,183,92,.12);
+    animation: luxePulse 2.5s ease-in-out infinite;
+}
+
+/* Decorative moving gold glows */
+.login-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.login-glow--one {
+    width: 300px;
+    height: 300px;
+    top: -140px;
+    right: -150px;
+    border: 1px solid rgba(220,175,93,.3);
+    box-shadow:
+        0 0 0 40px rgba(220,175,93,.04),
+        0 0 0 90px rgba(220,175,93,.025);
+    animation: luxeOrbit 9s ease-in-out infinite alternate;
+}
+
+.login-glow--two {
+    width: 240px;
+    height: 240px;
+    bottom: -155px;
+    left: -125px;
+    background: radial-gradient(
+        circle,
+        rgba(214,162,66,.19),
+        transparent 72%
+    );
+    animation: luxeFloat 7s ease-in-out infinite;
+}
+
+/* ===== RIGHT PANEL ===== */
+
+.login-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 46px clamp(25px,4vw,58px);
+    min-width: 0;
+}
+
+.login-panel__heading {
+    margin-bottom: 28px;
+    animation: luxeSlideUp .7s .12s both;
+}
+
+.login-panel__eyebrow {
+    color: #ab7b2e;
+    font-weight: 700;
+    font-size: .67rem;
+    letter-spacing: .15em;
+    margin-bottom: 12px;
+}
+
+.login-panel__heading h2 {
+    color: #14233c;
+    font-family: Newsreader,Georgia,serif;
+    font-weight: 500;
+    font-size: clamp(2.15rem,3vw,3rem);
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.login-panel__heading h2 span {
+    color: #c79a45;
+}
+
+.login-panel__heading > p:last-child {
+    color: #697488;
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+/* Override old two-column form */
+body.admin-portal #loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding: 0;
+    min-width: 0;
+}
+
+body.admin-portal #loginForm .admin-field {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+body.admin-portal #loginForm label {
+    color: #263650;
+    font-size: .79rem;
+    font-weight: 600;
+}
+
+/* Icon input wrappers */
+.login-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 48px;
+
+    background: white;
+    border: 1px solid #e0d5c5;
+    border-radius: 11px;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+
+.login-input:focus-within {
+    border-color: #c69a43;
+    box-shadow: 0 0 0 4px rgba(216,165,61,.12);
+    transform: translateY(-1px);
+}
+
+.login-input > svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 15px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: #9a8569;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+body.admin-portal #loginForm .login-input input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 0 13px;
+
+    border: 0;
+    outline: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: .87rem;
+    color: #14233c;
+}
+
+.login-password-toggle {
+    border: none;
+    background: transparent;
+    color: #9b752f;
+    font-size: .75rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 13px;
+}
+
+/* Premium sign-in button */
+body.admin-portal #loginForm .login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 49px;
+    margin-top: 5px;
+    padding: 0 20px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: linear-gradient(110deg,#14233c,#28415f);
+    color: #fff;
+    font-size: .86rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+body.admin-portal #loginForm .login-submit:hover {
+    background: linear-gradient(110deg,#a47722,#c99d4c);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(20,35,60,.18);
+}
+
+.login-submit span:last-child {
+    font-size: 1.3rem;
+    transition: transform .25s ease;
+}
+
+.login-submit:hover span:last-child {
+    transform: translateX(5px);
+}
+
+.login-panel__footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 26px;
+    color: #89909b;
+    font-size: .72rem;
+}
+
+.login-panel__footer svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: #ae873d;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes luxeCardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(28px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes luxeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes luxeFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes luxePulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: .45; }
+}
+
+@keyframes luxeOrbit {
+    from { transform: translate(0,0); }
+    to { transform: translate(-20px,20px); }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 720px) {
+    body.admin-portal #adminLogin:not(.admin-hidden) {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        margin-top: 15px;
+    }
+
+    .login-visual {
+        padding: 26px;
+    }
+
+    .login-symbol {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
+    }
+
+    .login-symbol img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .login-visual h2 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .login-visual__description {
+        font-size: .82rem;
+    }
+
+    .login-visual__footer {
+        margin-top: 20px;
+    }
+
+    .login-panel {
+        padding: 30px 25px;
+    }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    body.admin-portal #adminLogin,
+    .login-visual *,
+    .login-panel__heading,
+    .login-input,
+    .login-submit {
+        animation: none !important;
+        transition: none !important;
+    }
+}

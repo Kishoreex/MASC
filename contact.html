@@ -40,19 +40,24 @@
           <li class="nav__item has-menu">
             <a class="nav__link" href="about.html">About <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
             <ul class="menu">
-              <li><a href="about.html#college">The College</a></li>
-              <li><a href="about.html#mission">Mission Statement</a></li>
-              <li><a href="about.html#group">Madha Group</a></li>
-              <li><a href="about.html#leadership">Management Team</a></li>
-              <li><a href="about.html#principal">Principal&rsquo;s Office</a></li>
+              <li><a href="college.html">The College</a></li>
+              <li><a href="mission.html">Mission Statement</a></li>
+              <li><a href="leadership.html">Management Team</a></li>
+              <li><a href="principal.html">Principal&rsquo;s Office</a></li>
             </ul>
           </li>
+          <li class="nav__item"><a class="nav__link" href="academics.html">Academics</a></li>
           <li class="nav__item has-menu">
-            <a class="nav__link" href="academics.html">Academics <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <a class="nav__link" href="departments.html">Departments <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
             <ul class="menu">
-              <li><a href="academics.html#programmes">All Programmes</a></li>
-              <li><a href="academics.html#undergraduate">Undergraduate Admissions</a></li>
-              <li><a href="academics.html#postgraduate">Postgraduate Admissions</a></li>
+              <li><a href="department-commerce.html">Commerce</a></li>
+              <li><a href="department-business-administration.html">Business Administration</a></li>
+              <li><a href="department-computer-applications.html">Computer Applications</a></li>
+              <li><a href="department-computer-science.html">Computer Science</a></li>
+              <li><a href="department-biotechnology.html">Biotechnology</a></li>
+              <li><a href="department-mathematics.html">Mathematics</a></li>
+              <li><a href="department-english.html">English</a></li>
+              <li><a href="department-hotel-catering-management.html">Hotel &amp; Catering Management</a></li>
             </ul>
           </li>
           <li class="nav__item"><a class="nav__link" href="campus-life.html">Campus Life</a></li>
@@ -66,6 +71,9 @@
   <div class="nav-backdrop"></div>
 
   <main id="main">
+
+
+    
     <section class="page-hero page-hero--bright">
       <div class="page-hero__media"><img src="assets/img/campus-main-block.jpg" alt="" width="1600" height="747"></div>
       <div class="container page-hero__inner">
@@ -77,12 +85,107 @@
       </div>
     </section>
 
+    
+<!-- PREMIUM ADMISSION ENQUIRY FORM -->
+<section class="enquiry-section section anchor" id="enquiry">
+  <div class="container">
+
+    <div class="enquiry-heading" data-reveal>
+      <p class="eyebrow">START YOUR JOURNEY</p>
+      <h2>Admission Enquiry</h2>
+      <p>
+        Interested in joining Madha Arts & Science College?
+        Fill in your details to prepare an enquiry email.
+      </p>
+    </div>
+
+    <form class="enquiry-form" id="admissionForm">
+
+      <div class="enquiry-grid">
+
+        <div class="enquiry-field">
+          <label for="studentName">Full Name *</label>
+          <input type="text" id="studentName"
+                 name="studentName"
+                 placeholder="Enter your full name"
+                 autocomplete="name" required>
+        </div>
+
+        <div class="enquiry-field">
+          <label for="studentEmail">Email Address *</label>
+          <input type="email" id="studentEmail"
+                 name="studentEmail"
+                 placeholder="Enter your email"
+                 autocomplete="email" required>
+        </div>
+
+        <div class="enquiry-field">
+          <label for="studentPhone">Mobile Number *</label>
+          <input type="tel" id="studentPhone"
+                 name="studentPhone"
+                 placeholder="10-digit mobile number"
+                 autocomplete="tel"
+                 pattern="[0-9]{10}"
+                 title="Enter a 10-digit mobile number"
+                 required>
+        </div>
+
+        <div class="enquiry-field">
+          <label for="admissionType">Admission Type *</label>
+          <select id="admissionType" name="admissionType" required>
+            <option value="">Select admission type</option>
+            <option value="Undergraduate">Undergraduate (UG)</option>
+            <option value="Postgraduate">Postgraduate (PG)</option>
+          </select>
+        </div>
+
+        <div class="enquiry-field enquiry-full">
+          <label for="course">Interested Programme *</label>
+          <select id="course" name="course" required>
+            <option value="">Select your programme</option>
+            <option>B.Com</option>
+            <option>B.B.A</option>
+            <option>B.C.A</option>
+            <option>B.Sc Computer Science</option>
+            <option>B.Sc Biotechnology</option>
+            <option>B.Sc Mathematics</option>
+            <option>B.A English</option>
+            <option>Hotel & Catering Management</option>
+            <option>Other / Please advise</option>
+          </select>
+        </div>
+
+        <div class="enquiry-field enquiry-full">
+          <label for="enquiryMessage">Your Message</label>
+          <textarea id="enquiryMessage"
+                    name="enquiryMessage"
+                    rows="5"
+                    placeholder="Tell us about your enquiry..."></textarea>
+        </div>
+
+      </div>
+
+      <button type="submit" class="enquiry-submit">
+        Prepare Enquiry Email
+        <span aria-hidden="true">↗</span>
+      </button>
+
+      <p class="enquiry-note">
+        This opens your email application with your details
+        filled in. Please review and send the email.
+      </p>
+
+    </form>
+
+  </div>
+</section>
+
     <section class="section" aria-labelledby="contact-title">
       <div class="container contact-grid">
         <div data-reveal>
           <p class="eyebrow">Get in touch</p>
           <h2 id="contact-title">We&rsquo;d love to hear from you</h2>
-          <div class="contact-cards anchor" id="enquiry">
+          <div class="contact-cards">
             <div class="contact-card">
               <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               <div><h3>Address</h3><p>Erandamkattalai, Sadhanandhapuram, Thandalam Post<br>(near Anakaputhur Bus Stop), Chennai &ndash; 600 112</p></div>
@@ -110,6 +213,8 @@
         </div>
       </div>
     </section>
+
+
   </main>
 
   <footer class="site-footer">
@@ -121,10 +226,10 @@
       <div>
         <h4>Explore</h4>
         <ul class="footer-links">
-          <li><a href="about.html">About the College</a></li>
-          <li><a href="about.html#mission">Mission Statement</a></li>
-          <li><a href="about.html#leadership">Management Team</a></li>
-          <li><a href="about.html#principal">Principal&rsquo;s Office</a></li>
+          <li><a href="college.html">About the College</a></li>
+          <li><a href="mission.html">Mission Statement</a></li>
+          <li><a href="leadership.html">Management Team</a></li>
+          <li><a href="principal.html">Principal&rsquo;s Office</a></li>
           <li><a href="campus-life.html">Campus Life</a></li>
         </ul>
       </div>

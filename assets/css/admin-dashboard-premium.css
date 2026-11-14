@@ -1,0 +1,65 @@
+/* MADHA | Premium publishing workspace — dashboard only.
+   Load after news-admin.css and admin-login-luxe.css. */
+:root { --md-navy:#14243d; --md-gold:#b78636; --md-cream:#f8f5ef; --md-line:#e8dfd1; }
+body.admin-portal:has(#dashboard:not(.admin-hidden)) {background:radial-gradient(circle at 95% 8%,rgba(217,174,92,.13),transparent 34%),#f8f5ef;}
+body.admin-portal:has(#dashboard:not(.admin-hidden)) .admin-shell {max-width:1260px;margin:30px auto 80px;padding:0 clamp(16px,3vw,42px);}
+body.admin-portal:has(#dashboard:not(.admin-hidden)) .admin-shell > .eyebrow {font-size:.69rem;letter-spacing:.17em;color:#997028;margin:0 0 7px;}
+body.admin-portal:has(#dashboard:not(.admin-hidden)) .admin-shell > h1 {font-size:clamp(2rem,3.3vw,3.25rem);letter-spacing:-.025em;line-height:1.08;margin:0 0 8px;color:var(--md-navy);}
+body.admin-portal:has(#dashboard:not(.admin-hidden)) .admin-lead {max-width:760px;color:#647087;font-size:.94rem;line-height:1.65;margin-bottom:22px;}
+body.admin-portal #dashboard:not(.admin-hidden) {display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:22px;align-items:start;}
+body.admin-portal #dashboard > .admin-box {min-width:0;margin:0;border:1px solid var(--md-line);background:#fffefa;border-radius:21px;padding:clamp(20px,3vw,30px);box-shadow:0 14px 48px rgba(19,35,60,.055);}
+body.admin-portal #dashboard > .admin-box:first-child {position:relative;overflow:hidden;}
+body.admin-portal #dashboard > .admin-box:first-child::before {content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#b17c25,#e6be76,#b17c25);}
+body.admin-portal #dashboard .admin-box h2 {font-family:Newsreader,Georgia,serif;color:var(--md-navy);font-size:clamp(1.7rem,2.3vw,2.3rem);font-weight:500;line-height:1.1;margin:0;}
+body.admin-portal #dashboard .admin-box > h2 {margin-bottom:20px;}
+body.admin-portal #dashboard .admin-box > .admin-actions {margin:0 0 22px;justify-content:space-between!important;align-items:center;}
+body.admin-portal #dashboard #logout {background:#f5eee3!important;color:#795824!important;border:1px solid #e7d5b7;border-radius:999px;padding:9px 15px;font-size:.77rem;}
+body.admin-portal #dashboard #logout:hover {background:#eee1cb!important;}
+body.admin-portal #dashboard #postForm {display:grid;grid-template-columns:1fr 1fr;gap:16px 15px;}
+body.admin-portal #dashboard #postForm .admin-field {min-width:0;gap:7px;}
+body.admin-portal #dashboard #postForm .admin-field.full {grid-column:1/-1;}
+body.admin-portal #dashboard #postForm label {font-size:.78rem;font-weight:700;color:#29384f;}
+body.admin-portal #dashboard #postForm input:not([type=file]),body.admin-portal #dashboard #postForm select,body.admin-portal #dashboard #postForm textarea {width:100%;min-height:45px;background:#fff;border:1px solid #ded6c9;border-radius:10px;color:var(--md-navy);padding:11px 13px;font:inherit;font-size:.86rem;transition:border-color .2s,box-shadow .2s;}
+body.admin-portal #dashboard #postForm textarea {min-height:118px;resize:vertical;line-height:1.65;}
+body.admin-portal #dashboard #postForm input:focus-visible,body.admin-portal #dashboard #postForm textarea:focus-visible,body.admin-portal #dashboard #postForm select:focus-visible {outline:0;border-color:var(--md-gold);box-shadow:0 0 0 3px rgba(183,134,54,.14);}
+body.admin-portal #dashboard #postImage {width:100%;padding:9px;border:1px dashed #d9bd8b;background:#fbf7ef;border-radius:10px;font-size:.76rem;color:#344155;}
+body.admin-portal #dashboard #postImage::file-selector-button {background:#e9ddc9;color:#4d3b24;border:0;border-radius:7px;padding:8px 10px;margin-right:10px;cursor:pointer;}
+body.admin-portal #dashboard #postForm button[type=submit] {width:100%;min-height:47px;border-radius:10px;background:linear-gradient(110deg,#14243d,#2a4261);color:#fff;font-size:.88rem;font-weight:700;transition:transform .25s,box-shadow .25s;}
+body.admin-portal #dashboard #postForm button[type=submit]:hover {transform:translateY(-2px);box-shadow:0 12px 25px rgba(20,36,61,.15);}
+/* Dashboard-wide statistics */
+body.admin-portal #dashboard .md-overview {grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+body.admin-portal #dashboard .md-stat {position:relative;overflow:hidden;background:#fffefa;border:1px solid var(--md-line);border-radius:16px;padding:16px 20px;box-shadow:0 10px 25px rgba(20,35,60,.035);animation:mdRise .65s both;}
+body.admin-portal #dashboard .md-stat:nth-child(2){animation-delay:.07s}body.admin-portal #dashboard .md-stat:nth-child(3){animation-delay:.14s}body.admin-portal #dashboard .md-stat:nth-child(4){animation-delay:.21s}
+body.admin-portal #dashboard .md-stat::after {content:"";position:absolute;right:-20px;bottom:-38px;width:88px;height:88px;border:1px solid rgba(194,150,72,.18);border-radius:50%;}
+body.admin-portal #dashboard .md-stat__label {display:block;color:#697589;font-size:.74rem;font-weight:600;letter-spacing:.02em;}
+body.admin-portal #dashboard .md-stat__value {display:block;margin-top:7px;color:var(--md-navy);font:500 clamp(1.8rem,3vw,2.5rem)/1 Newsreader,Georgia,serif;}
+/* Gallery-like post management */
+body.admin-portal #dashboard #postList {display:grid;gap:11px;}
+body.admin-portal #dashboard .admin-post {display:flex;align-items:flex-start;justify-content:space-between;gap:13px;padding:16px;background:#fff;border:1px solid #ebe3d7;border-radius:13px;box-shadow:0 4px 13px rgba(20,35,60,.02);transition:transform .28s,box-shadow .28s,border-color .28s;animation:mdRise .5s both;}
+body.admin-portal #dashboard .admin-post:hover {transform:translateY(-3px);border-color:#d9c29b;box-shadow:0 12px 26px rgba(20,35,60,.07);}
+body.admin-portal #dashboard .admin-post > div:first-child {min-width:0;flex:1;}
+body.admin-portal #dashboard .admin-post small {display:inline-flex;background:#f5ead5;color:#8c611d;padding:5px 9px;border-radius:999px;font-size:.62rem;letter-spacing:.08em;font-weight:700;}
+body.admin-portal #dashboard .admin-post small.md-draft {background:#edf0f4;color:#647184;}
+body.admin-portal #dashboard .admin-post h3 {font:500 1.35rem/1.2 Newsreader,Georgia,serif;color:var(--md-navy);margin:10px 0 6px;overflow-wrap:anywhere;}
+body.admin-portal #dashboard .admin-post p {color:#667186;font-size:.78rem;line-height:1.65;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}
+body.admin-portal #dashboard .admin-post .admin-actions {display:flex;flex-direction:column;gap:7px;margin:0;flex-shrink:0;}
+body.admin-portal #dashboard .admin-post .admin-btn {font-size:.7rem;border-radius:8px;padding:8px 10px;min-width:90px;}
+body.admin-portal #dashboard .admin-post .admin-btn.alt {background:#f0e3ca;color:#77551e;}
+body.admin-portal #dashboard .admin-post .admin-btn.danger {background:#fbe9e7;color:#9d3636;}
+body.admin-portal #dashboard .admin-post .admin-btn:hover {filter:brightness(.95);}
+body.admin-portal #dashboard .md-listbar {display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin:0 0 16px;}
+body.admin-portal #dashboard .md-filters {display:flex;flex-wrap:wrap;gap:6px;}
+body.admin-portal #dashboard .md-filter {border:1px solid #e5dacc;background:#fff;color:#59677a;border-radius:999px;padding:7px 12px;font-size:.73rem;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s;}
+body.admin-portal #dashboard .md-filter[aria-pressed=true] {background:#152640;border-color:#152640;color:#fff;}
+body.admin-portal #dashboard .md-empty {color:#667386;font-size:.87rem;padding:20px;background:#f7f3ec;border-radius:12px;}
+body.admin-portal #dashboard .md-photo-preview {display:none;grid-column:1/-1;align-items:center;gap:13px;border:1px solid #e7ddcd;border-radius:12px;background:#fcfaf6;padding:10px 12px;}
+body.admin-portal #dashboard .md-photo-preview.is-visible {display:flex;}
+body.admin-portal #dashboard .md-photo-preview img {width:92px;height:66px;border-radius:8px;object-fit:cover;}
+body.admin-portal #dashboard .md-photo-preview span {color:#647087;font-size:.78rem;overflow-wrap:anywhere;}
+body.admin-portal #adminStatus {max-width:none;margin:18px 0 0;}
+@keyframes mdRise {from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px){body.admin-portal #dashboard:not(.admin-hidden){grid-template-columns:1fr;}body.admin-portal #dashboard .md-overview{grid-template-columns:repeat(4,minmax(0,1fr));}}
+@media(max-width:650px){body.admin-portal #dashboard .md-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}body.admin-portal #dashboard #postForm{grid-template-columns:1fr;}body.admin-portal #dashboard #postForm .admin-field.full{grid-column:auto;}body.admin-portal #dashboard .admin-post{flex-direction:column;}body.admin-portal #dashboard .admin-post .admin-actions{flex-direction:row;width:100%;}body.admin-portal #dashboard .admin-post .admin-btn{flex:1;}}
+@media(prefers-reduced-motion:reduce){body.admin-portal #dashboard *,body.admin-portal #dashboard *::before,body.admin-portal #dashboard *::after{animation:none!important;transition:none!important;}}
+/* The original .admin-post display:flex must not override the HTML hidden attribute. */
+body.admin-portal #dashboard .admin-post[hidden],body.admin-portal #dashboard .md-empty[hidden] {display:none!important;}

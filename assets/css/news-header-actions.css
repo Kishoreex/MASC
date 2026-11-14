@@ -1,0 +1,36 @@
+/* Header links for each moving feed; no buttons inside cards */
+#madha-updates .madha-updates__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+#madha-updates .madha-updates__all {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 36px;
+  padding: 8px 13px;
+  border: 1px solid #d8b77b;
+  border-radius: 999px;
+  background: #fffdf9;
+  color: #14233c;
+  font: 600 12px/1.2 Inter, system-ui, sans-serif;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+#madha-updates .madha-updates__all:hover,
+#madha-updates .madha-updates__all:focus-visible {
+  background: #14233c;
+  color: white;
+}
+@media(max-width:650px){
+  #madha-updates .madha-updates__header {align-items:center;}
+  #madha-updates .madha-updates__all {padding: 7px 10px;font-size:11px;}
+}
+@media(prefers-reduced-motion:reduce){
+  #madha-updates .madha-updates__all{transition:none;}
+}

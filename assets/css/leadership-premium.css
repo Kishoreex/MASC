@@ -1,0 +1,438 @@
+/* MANAGEMENT TEAM — EDITORIAL EDITION v2
+   Replace the old leadership-premium.css with this entire file.
+   Scoped to body.leadership-refresh. No HTML/JS modifications needed. */
+.leadership-refresh{background:#fbfaf7;color:#14233c}
+.leadership-refresh .management-hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,#faf7f1,#f1e7d7);color:#14233c}
+.leadership-refresh .management-hero__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(150px,.65fr);align-items:center;gap:2rem;min-height:0;padding-top:34px;padding-bottom:40px}
+.leadership-refresh .management-crumbs{margin:0 0 1.1rem;color:#976e2b}
+.leadership-refresh .management-crumbs a{color:#38465a}
+.leadership-refresh .management-crumbs li+li::before{color:#aa803c}
+.leadership-refresh .management-kicker{display:flex;gap:12px;align-items:center;font:700 .69rem/1.4 var(--font-body);letter-spacing:.16em;color:#9a7132;margin:0 0 .7rem}
+.leadership-refresh .management-kicker span{display:inline-block;flex:none;width:28px;height:2px;background:#c29136}
+.leadership-refresh .management-hero h1{max-width:730px;color:#14233c;font-size:clamp(2.35rem,3.45vw,3.7rem);line-height:1.08;letter-spacing:-.025em;margin:0 0 .85rem}
+.leadership-refresh .management-hero h1 em,.leadership-refresh .management-section-head h2 em,.leadership-refresh .management-cta h2 em{font-weight:400;color:#ac7d35}
+.leadership-refresh .management-hero__lead{max-width:610px;color:#586274;font-size:.99rem;line-height:1.7;margin:0 0 1.15rem}
+.leadership-refresh .management-discover{display:inline-flex;align-items:center;gap:14px;font-weight:600;font-size:.91rem;color:#14233c;text-decoration:none;border-bottom:1px solid #bb904a;padding-bottom:6px;transition:gap .3s ease}
+.leadership-refresh .management-discover:hover{gap:22px}
+.leadership-refresh .management-discover span{font-size:1.3rem}
+.leadership-refresh .management-hero__art{position:relative;display:grid;place-items:center;width:min(100%,190px);aspect-ratio:1;justify-self:center}
+.leadership-refresh .management-art__ring{position:absolute;inset:5%;border:1px solid #dbc49e;border-radius:50%}
+.leadership-refresh .management-art__ring--two{inset:18%;border-color:#e5d6bc}
+.leadership-refresh .management-art__monogram{font:400 clamp(6rem,10vw,9rem)/1 var(--font-display);color:#d2b98d;transform:translateY(5px)}
+.leadership-refresh .management-art__caption{position:absolute;bottom:-10%;width:220px;text-align:center;font:600 .52rem var(--font-body);letter-spacing:.16em;color:#9b752e}
+.leadership-refresh .management-art__caption span{padding-inline:3px;color:#c7ab77}
+.leadership-refresh .management-hero__bottom{display:flex;justify-content:space-between;padding:9px max(var(--gutter),calc((100vw - var(--container))/2 + var(--gutter)));border-top:1px solid #e7dac5;color:#956c2c;font-size:.63rem;letter-spacing:.16em;font-weight:600}
+/* Editorial leadership profiles: photo and narrative are not one huge box. */
+.leadership-refresh .management-intro{padding-block:clamp(3.5rem,6vw,5.8rem);background:#fbfaf7}
+.leadership-refresh .management-section-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:clamp(2.2rem,4vw,3.5rem)}
+.leadership-refresh .management-section-head h2{color:#14233c;font-size:clamp(2rem,3vw,3.2rem);line-height:1.1;margin:0}
+.leadership-refresh .management-section-head>p{max-width:345px;color:#667184;line-height:1.8;margin:0;font-size:.96rem}
+.leadership-refresh .management-profiles{display:grid;gap:clamp(3.8rem,7vw,6.5rem)}
+.leadership-refresh .management-profile,.leadership-refresh .management-profile--reverse{display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);align-items:center;min-height:0;gap:clamp(2rem,6vw,6rem);border:0;border-radius:0;box-shadow:none;overflow:visible;background:transparent;transform:none;transition:none;position:relative}
+.leadership-refresh .management-profile::after{content:"";position:absolute;bottom:calc(-1 * clamp(1.9rem,3.5vw,3.25rem));left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#e4d8c4,transparent)}
+.leadership-refresh .management-profile:last-child::after{display:none}
+.leadership-refresh .management-profile:hover{transform:none;box-shadow:none}
+.leadership-refresh .management-profile--reverse{grid-template-columns:minmax(0,57%) minmax(0,43%)}
+.leadership-refresh .management-profile--reverse .management-profile__portrait{order:2}
+/* A consistent, framed 4:4.6 portrait crop across all three. */
+.leadership-refresh .management-profile__portrait{width:100%;min-height:0;height:auto;aspect-ratio:4/4.6;position:relative;isolation:isolate;overflow:hidden;border-radius:8px;background:#e5dbcb;box-shadow:18px 18px 0 #eee6da,0 16px 38px rgba(19,32,50,.13)}
+.leadership-refresh .management-profile--reverse .management-profile__portrait{box-shadow:-18px 18px 0 #eee6da,0 16px 38px rgba(19,32,50,.13)}
+.leadership-refresh .management-profile__portrait::after{content:"";pointer-events:none;position:absolute;inset:12px;border:1px solid rgba(255,255,255,.5);border-radius:3px;z-index:1}
+.leadership-refresh .management-profile__portrait img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.leadership-refresh .management-profile:hover .management-profile__portrait img{transform:scale(1.035)}
+/* Individual photo crops can be tuned independently if needed. */
+.leadership-refresh .management-profile:nth-child(1) .management-profile__portrait img{object-position:50% 24%}
+.leadership-refresh .management-profile:nth-child(2) .management-profile__portrait img{object-position:50% 22%}
+.leadership-refresh .management-profile:nth-child(3) .management-profile__portrait img{object-position:50% 19%}
+.leadership-refresh .management-profile__number{position:absolute;z-index:2;left:18px;bottom:18px;background:#fbf7ee;color:#9b722c;border:1px solid #ddc8a6;border-radius:3px;padding:9px 13px;font-size:.72rem;font-weight:700;letter-spacing:.12em}
+.leadership-refresh .management-profile__content{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;padding:clamp(1rem,2.5vw,2rem) clamp(.2rem,1.5vw,1.5rem)}
+.leadership-refresh .management-profile__eyebrow{display:block;color:#a47722;font-size:.72rem;font-weight:700;letter-spacing:.17em;margin-bottom:1.2rem}
+.leadership-refresh .management-profile h3{font:500 clamp(2.2rem,3.7vw,4rem)/1.06 var(--font-display);letter-spacing:-.025em;color:#15233c;margin:0 0 1.2rem;max-width:12ch}
+.leadership-refresh .management-profile__rule{height:2px;width:70px;background:linear-gradient(90deg,#a5792a,#e4bb71);margin:0 0 1.55rem;transition:width .4s}
+.leadership-refresh .management-profile:hover .management-profile__rule{width:110px}
+.leadership-refresh .management-profile__content>p{font-size:clamp(.96rem,1.1vw,1.05rem);line-height:1.95;letter-spacing:.005em;color:#5c6779;margin:0;max-width:56ch}
+.leadership-refresh .management-profile__signature{margin-top:1.8rem;color:#a37c3d;font:italic 1.15rem var(--font-display)}
+/* Closing invitation */
+.leadership-refresh .management-cta{background:linear-gradient(112deg,#f0e6d6,#f9f5ed);border-top:1px solid #e8ddcc}
+.leadership-refresh .management-cta__inner{display:flex;align-items:end;justify-content:space-between;gap:2rem;padding-block:clamp(3rem,6vw,5.5rem)}
+.leadership-refresh .management-cta h2{color:#14233c;font-size:clamp(2rem,3.4vw,3.4rem);margin:0 0 1rem}
+.leadership-refresh .management-cta p:not(.management-kicker){color:#586274;margin:0}
+.leadership-refresh .management-cta__link{display:inline-flex;align-items:center;gap:20px;white-space:nowrap;padding:15px 23px;border-radius:3px;background:#14233c;color:#fff;text-decoration:none;font-weight:600;transition:background .25s,transform .25s}
+.leadership-refresh .management-cta__link:hover{background:#90671e;transform:translateY(-2px)}
+@media(max-width:900px){
+ .leadership-refresh .management-hero__grid{grid-template-columns:1fr;padding-block:35px 42px}
+ .leadership-refresh .management-hero__art{display:none}
+ .leadership-refresh .management-section-head{flex-direction:column;align-items:start}
+ .leadership-refresh .management-profile,.leadership-refresh .management-profile--reverse{gap:2.5rem}
+ .leadership-refresh .management-profile__portrait{aspect-ratio:4/5}
+ .leadership-refresh .management-profile h3{font-size:clamp(2rem,3.8vw,3rem)}
+ .leadership-refresh .management-cta__inner{flex-direction:column;align-items:start}
+}
+@media(max-width:650px){
+ .leadership-refresh .management-hero__grid{padding-block:28px 36px}
+ .leadership-refresh .management-hero h1{font-size:clamp(2.2rem,8vw,3rem)}
+ .leadership-refresh .management-profile,.leadership-refresh .management-profile--reverse{display:flex;flex-direction:column;align-items:stretch;gap:2.25rem}
+ .leadership-refresh .management-profile--reverse .management-profile__portrait{order:0}
+ .leadership-refresh .management-profile__portrait,.leadership-refresh .management-profile--reverse .management-profile__portrait{width:min(100%,440px);aspect-ratio:4/4.5;margin-inline:auto;box-shadow:10px 10px 0 #eee6da,0 10px 30px rgba(19,32,50,.12)}
+ .leadership-refresh .management-profile__content{padding:.4rem .2rem 0}
+ .leadership-refresh .management-profile h3{font-size:clamp(2.25rem,8vw,3rem)}
+ .leadership-refresh .management-profile::after{bottom:-2rem}
+}
+@media(prefers-reduced-motion:reduce){.leadership-refresh .management-profile__portrait img,.leadership-refresh .management-profile__rule,.leadership-refresh .management-discover,.leadership-refresh .management-cta__link{transition:none}}
+
+
+
+/* =========================================
+   MANAGEMENT TEAM — PREMIUM SCROLL EFFECTS
+   ========================================= */
+
+/* 1. Remove photo number badges */
+.leadership-refresh .management-profile__number {
+    display: none !important;
+}
+
+/* 2. Better spacing between profile sections */
+.leadership-refresh .management-profiles {
+    gap: 4.5rem;
+}
+
+/* 3. Make profile sections feel more premium */
+.leadership-refresh .management-profile {
+    position: relative;
+}
+
+.leadership-refresh .management-profile::before {
+    content: "";
+    position: absolute;
+    inset: 30px -20px auto auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(216, 165, 61, 0.10) 0%,
+        rgba(216, 165, 61, 0.03) 45%,
+        transparent 75%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 4. Keep inner content above decoration */
+.leadership-refresh .management-profile__portrait,
+.leadership-refresh .management-profile__content {
+    position: relative;
+    z-index: 1;
+}
+
+/* 5. Stronger premium image frame */
+.leadership-refresh .management-profile__portrait {
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow:
+        0 18px 40px rgba(20, 35, 60, 0.10),
+        0 8px 18px rgba(20, 35, 60, 0.06);
+}
+
+.leadership-refresh .management-profile__portrait img {
+    transition:
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+}
+
+/* 6. Nice hover zoom */
+.leadership-refresh .management-profile:hover .management-profile__portrait img {
+    transform: scale(1.04);
+    filter: saturate(1.04) contrast(1.02);
+}
+
+/* 7. Better text block feel */
+.leadership-refresh .management-profile__content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.leadership-refresh .management-profile h3 {
+    margin-bottom: 1rem;
+}
+
+.leadership-refresh .management-profile__content > p {
+    max-width: 52ch;
+}
+
+/* 8. Gold divider animation */
+.leadership-refresh .management-profile__rule {
+    transition:
+        width 0.55s ease,
+        opacity 0.4s ease;
+}
+
+.leadership-refresh .management-profile:hover .management-profile__rule {
+    width: 110px;
+}
+
+/* =========================================
+   PREMIUM SCROLL REVEAL EFFECTS
+   Uses your existing main.js reveal system
+   ========================================= */
+
+/* Let the article itself stay visible enough for child animations */
+html.js .leadership-refresh .management-profile[data-reveal] {
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Portrait animation start */
+html.js .leadership-refresh .management-profile[data-reveal] .management-profile__portrait {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition:
+        opacity 0.9s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s ease;
+}
+
+/* Content animation start */
+html.js .leadership-refresh .management-profile[data-reveal] .management-profile__content {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity 0.85s ease,
+        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.12s;
+}
+
+/* Make alternating rows feel more editorial */
+html.js .leadership-refresh .management-profile[data-reveal]:not(.management-profile--reverse) .management-profile__portrait {
+    transform: translateX(-36px) translateY(30px) scale(0.96);
+}
+
+html.js .leadership-refresh .management-profile[data-reveal]:not(.management-profile--reverse) .management-profile__content {
+    transform: translateX(36px) translateY(20px);
+}
+
+html.js .leadership-refresh .management-profile[data-reveal].management-profile--reverse .management-profile__portrait {
+    transform: translateX(36px) translateY(30px) scale(0.96);
+}
+
+html.js .leadership-refresh .management-profile[data-reveal].management-profile--reverse .management-profile__content {
+    transform: translateX(-36px) translateY(20px);
+}
+
+/* Final visible state after scroll reveal */
+html.js .leadership-refresh .management-profile[data-reveal].is-in .management-profile__portrait,
+html.js .leadership-refresh .management-profile[data-reveal].is-in .management-profile__content {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+}
+
+/* Section heading reveal polish */
+html.js .leadership-refresh .management-section-head[data-reveal] {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.js .leadership-refresh .management-section-head[data-reveal] .management-kicker span {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.75s ease;
+}
+
+html.js .leadership-refresh .management-section-head[data-reveal].is-in .management-kicker span {
+    transform: scaleX(1);
+}
+
+/* CTA reveal polish */
+html.js .leadership-refresh .management-cta__inner[data-reveal] {
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 9. Responsive adjustments */
+@media (max-width: 900px) {
+    .leadership-refresh .management-profiles {
+        gap: 3rem;
+    }
+
+    html.js .leadership-refresh .management-profile[data-reveal] .management-profile__portrait,
+    html.js .leadership-refresh .management-profile[data-reveal] .management-profile__content {
+        transform: translateY(24px) scale(0.98);
+    }
+
+    html.js .leadership-refresh .management-profile[data-reveal].is-in .management-profile__portrait,
+    html.js .leadership-refresh .management-profile[data-reveal].is-in .management-profile__content {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 10. Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .leadership-refresh .management-profile::before,
+    .leadership-refresh .management-profile__portrait img,
+    .leadership-refresh .management-profile__portrait,
+    .leadership-refresh .management-profile__content,
+    .leadership-refresh .management-profile__rule,
+    .leadership-refresh .management-section-head[data-reveal] .management-kicker span,
+    .leadership-refresh .management-cta__inner[data-reveal] {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    html.js .leadership-refresh .management-profile[data-reveal] .management-profile__portrait,
+    html.js .leadership-refresh .management-profile[data-reveal] .management-profile__content {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+/* =========================================
+   LEADERSHIP PHOTO POSITION FIX
+   ========================================= */
+
+/* Move all photos slightly downward */
+.leadership-refresh .management-profile__portrait img {
+    object-position: center 8% !important;
+}
+
+/* Founder & Chairman */
+.leadership-refresh .management-profile:nth-child(1)
+.management-profile__portrait img {
+    object-position: center 50% !important;
+}
+
+/* Vice-Chairperson */
+.leadership-refresh .management-profile:nth-child(2)
+.management-profile__portrait img {
+    object-position: center 0% !important;
+}
+
+/* Managing Director */
+.leadership-refresh .management-profile:nth-child(3)
+.management-profile__portrait img {
+    object-position: center 2% !important;
+}
+
+
+
+/* ==========================================
+   LEADERSHIP — TEXT ALIGNMENT FIX
+   ========================================== */
+
+/* Consistent image and text columns */
+.leadership-refresh .management-profile {
+    align-items: center;
+    column-gap: clamp(35px, 5vw, 85px);
+}
+
+/* Keep all text in a consistent column */
+.leadership-refresh .management-profile__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 540px;
+    padding: 30px 0;
+    margin: 0;
+}
+
+/* Consistent role label */
+.leadership-refresh .management-profile__eyebrow {
+    display: block;
+    margin: 0 0 14px;
+    line-height: 1.5;
+}
+
+/* Consistent heading spacing */
+.leadership-refresh .management-profile h3 {
+    margin: 0 0 18px;
+    line-height: 1.12;
+    text-align: left;
+}
+
+/* Consistent gold divider */
+.leadership-refresh .management-profile__rule {
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 0 0 24px;
+}
+
+/* Main paragraph formatting */
+.leadership-refresh .management-profile__content > p {
+    margin: 0;
+    width: 100%;
+    max-width: 52ch;
+
+    font-size: 1rem;
+    line-height: 1.85;
+
+    color: #586274;
+    text-align: left;
+    text-wrap: pretty;
+}
+
+/* Signature below paragraph */
+.leadership-refresh .management-profile__signature {
+    display: block;
+    margin-top: 22px;
+    line-height: 1.5;
+}
+
+/* Reverse card — align text consistently */
+.leadership-refresh .management-profile--reverse
+.management-profile__content {
+    justify-self: start;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    .leadership-refresh .management-profile {
+        column-gap: 32px;
+    }
+
+    .leadership-refresh .management-profile__content {
+        padding: 20px 0;
+    }
+
+    .leadership-refresh .management-profile__content > p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 650px) {
+    .leadership-refresh .management-profile__content {
+        max-width: none;
+        padding: 24px 8px;
+    }
+
+    .leadership-refresh .management-profile h3 {
+        font-size: 2rem;
+    }
+
+    .leadership-refresh .management-profile__content > p {
+        max-width: none;
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   PREMIUM BIOGRAPHY — JUSTIFIED TEXT
+   ========================================== */
+
+.leadership-refresh .management-profile__content > p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
+
+    line-height: 1.9;
+    letter-spacing: 0;
+    word-spacing: normal;
+}

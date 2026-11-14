@@ -1,0 +1,279 @@
+
+/* ==========================================
+   PRINCIPAL'S OFFICE — PREMIUM DESIGN
+   ========================================== */
+
+.principal-refresh {
+    background: #fcfaf6;
+}
+
+/* SHORT, ELEGANT HERO */
+
+.principal-refresh .page-hero--principal {
+    background:
+        radial-gradient(
+            circle at 88% 18%,
+            rgba(216, 165, 61, 0.20),
+            transparent 32%
+        ),
+        linear-gradient(115deg, #faf7f1, #f2e8d8);
+    color: #14233c;
+}
+
+.principal-refresh .page-hero--principal::before {
+    display: none;
+}
+
+.principal-refresh .page-hero__content::before {
+    display: none;
+}
+
+.principal-refresh .page-hero__inner {
+    padding-block: 52px 58px;
+}
+
+.principal-refresh .page-hero h1 {
+    max-width: 850px;
+    font-size: clamp(2.5rem, 3.8vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: #14233c;
+    margin-bottom: 18px;
+}
+
+.principal-refresh .page-hero h1 em {
+    color: #ad7b2e;
+    font-weight: 400;
+}
+
+.principal-refresh .page-hero p {
+    color: #586274;
+    max-width: 620px;
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
+
+/* BREADCRUMBS */
+
+.principal-refresh .page-hero .crumbs {
+    color: #99702d;
+    margin-bottom: 18px;
+}
+
+.principal-refresh .page-hero .crumbs a {
+    color: #14233c;
+}
+
+.principal-refresh .page-hero .crumbs li + li::before {
+    color: #b08a51;
+}
+
+/* MAIN MESSAGE SECTION */
+
+.principal-refresh main > .section {
+    padding-block: clamp(65px, 8vw, 110px);
+    background: #fcfaf6;
+}
+
+.principal-refresh .message {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.82fr)
+        minmax(0, 1.18fr);
+    gap: clamp(45px, 6vw, 95px);
+
+    align-items: start !important;
+}
+
+/* PRINCIPAL PORTRAIT */
+
+.principal-refresh .message__photo {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    padding: 12px;
+    background: #f0e6d7;
+    border-radius: 22px;
+    box-shadow: 0 22px 55px rgba(20, 35, 60, 0.10);
+}
+
+.principal-refresh .message__photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 13px;
+    box-shadow: none;
+
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.principal-refresh .message__photo:hover img {
+    transform: scale(1.025);
+}
+
+/* REMOVE OLD DECORATIVE FRAME */
+
+.principal-refresh .message__photo::after {
+    display: none;
+}
+
+/* MESSAGE TYPOGRAPHY */
+
+.principal-refresh .letter {
+    max-width: 700px;
+    padding-top: 12px;
+}
+
+.principal-refresh .letter .eyebrow {
+    color: #a47722;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 24px;
+}
+
+.principal-refresh .letter h2 {
+    font-size: clamp(2.1rem, 3.3vw, 3.4rem);
+    line-height: 1.14;
+    color: #14233c;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+}
+
+/* JUSTIFIED BIOGRAPHY / MESSAGE */
+
+.principal-refresh .letter > p:not(.eyebrow) {
+    color: #586274;
+    font-size: 1rem;
+    line-height: 1.95;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    margin-bottom: 22px;
+}
+
+/* Remove the oversized drop cap */
+.principal-refresh .letter h2 + p::first-letter {
+    float: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0;
+    color: inherit;
+}
+
+/* PREMIUM SIGNATURE */
+
+.principal-refresh .signature {
+    margin-top: 34px;
+    padding-top: 26px;
+    border-top: 1px solid #e4d6bf;
+}
+
+.principal-refresh .signature::before {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 3px;
+    background: #d8a53d;
+    margin-top: -28px;
+    margin-bottom: 26px;
+}
+
+.principal-refresh .signature strong {
+    color: #14233c;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.principal-refresh .signature span {
+    color: #9b712b;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+/* SCROLL REVEAL POLISH */
+
+html.js .principal-refresh
+.message__photo[data-reveal] {
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.js .principal-refresh
+.letter[data-reveal] {
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.js .principal-refresh
+.message__photo[data-reveal]:not(.is-in) {
+    transform: translateY(40px);
+}
+
+html.js .principal-refresh
+.letter[data-reveal]:not(.is-in) {
+    transform: translateY(32px);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .principal-refresh .message {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .principal-refresh .message__photo {
+        max-width: 390px;
+    }
+
+    .principal-refresh .letter {
+        max-width: 100%;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .principal-refresh .page-hero__inner {
+        padding-block: 38px 45px;
+    }
+
+    .principal-refresh .page-hero h1 {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+    }
+
+    .principal-refresh main > .section {
+        padding-block: 55px;
+    }
+
+    .principal-refresh .message {
+        gap: 35px;
+    }
+
+    .principal-refresh .letter h2 {
+        font-size: 2.15rem;
+    }
+
+    .principal-refresh .letter > p:not(.eyebrow) {
+        font-size: 0.96rem;
+        line-height: 1.85;
+        text-align: left;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .principal-refresh .message__photo img,
+    html.js .principal-refresh [data-reveal] {
+        transition: none !important;
+        transform: none !important;
+    }
+}

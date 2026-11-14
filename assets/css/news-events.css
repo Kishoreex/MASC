@@ -1,0 +1,491 @@
+/* Madha College — separate News and Events feeds */
+#madha-updates.madha-updates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 28px;
+  padding: 44px max(24px, calc((100% - 1240px) / 2 + 40px)) 58px;
+  background: linear-gradient(120deg, #faf7f1, #f3eadc);
+  overflow: hidden;
+}
+
+#madha-updates .madha-updates__group {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+}
+
+#madha-updates .madha-updates__header {
+  display: flex;
+  align-items: center;
+  margin: 0 0 18px;
+  padding: 0;
+  gap: 12px;
+}
+
+/* JS already adds .container to the headings; remove its fixed gutter inside each column. */
+#madha-updates .madha-updates__header.container {
+  max-width: none;
+  width: 100%;
+  padding-inline: 0;
+}
+
+#madha-updates .madha-updates__eyebrow {
+  margin: 0 0 6px;
+  color: #93691b;
+  font: 700 0.7rem/1.5 Inter, system-ui, sans-serif;
+  letter-spacing: 0.16em;
+}
+
+#madha-updates .madha-updates__header h2 {
+  margin: 0;
+  color: #14233c;
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  line-height: 1.13;
+}
+
+#madha-updates .madha-updates__viewport {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+#madha-updates .madha-updates__track {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  width: max-content;
+  animation: madha-slide 38s linear infinite;
+}
+
+#madha-updates .madha-updates__track--reverse {
+  animation-direction: reverse;
+  animation-duration: 44s;
+}
+
+#madha-updates .madha-updates__viewport:hover .madha-updates__track,
+#madha-updates .madha-updates__viewport:focus-within .madha-updates__track {
+  animation-play-state: paused;
+}
+
+#madha-updates .madha-updates__card {
+  display: flex;
+  flex: 0 0 clamp(230px, 27vw, 320px);
+  flex-direction: column;
+  width: clamp(230px, 27vw, 320px);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e6d9c6;
+  border-radius: 16px;
+  background: #fffdf9;
+  box-shadow: 0 10px 28px rgba(20, 35, 60, 0.07);
+  transition: box-shadow 0.3s ease;
+}
+
+#madha-updates .madha-updates__card:hover {
+  box-shadow: 0 16px 34px rgba(20, 35, 60, 0.13);
+}
+
+#madha-updates .madha-updates__card img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+#madha-updates .madha-updates__card-body {
+  padding: 17px 19px 19px;
+}
+
+#madha-updates .madha-updates__card time {
+  color: #9b712b;
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+#madha-updates .madha-updates__card h3 {
+  margin: 8px 0;
+  color: #14233c;
+  font: 600 1.3rem/1.2 Newsreader, Georgia, serif;
+}
+
+#madha-updates .madha-updates__card p {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: #586274;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* One item: show it fully; original JS already disables its animation. */
+#madha-updates .madha-updates__track:has(> .madha-updates__card:only-child) {
+  width: 100%;
+  animation: none !important;
+  transform: none !important;
+}
+
+#madha-updates .madha-updates__card:only-child {
+  flex: 0 0 min(100%, 420px);
+  width: min(100%, 420px);
+}
+
+#madha-updates .madha-updates__empty {
+  width: 100%;
+  margin: 0;
+  padding: 24px;
+  border: 1px solid #e6d9c6;
+  border-radius: 14px;
+  background: #fffdf9;
+  color: #586274;
+  font-size: 0.9rem;
+}
+
+#madha-updates .madha-updates__empty.container {
+  max-width: none;
+  padding-inline: 24px;
+}
+
+/* The script repeats two or more posts to create a seamless track. */
+@keyframes madha-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 8px)); }
+}
+
+@media (max-width: 900px) {
+  #madha-updates.madha-updates {
+    gap: 20px;
+    padding-inline: 22px;
+  }
+  #madha-updates .madha-updates__card {
+    width: 250px;
+    flex-basis: 250px;
+  }
+  #madha-updates .madha-updates__card:only-child {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  #madha-updates.madha-updates {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    padding: 34px 18px 44px;
+  }
+  #madha-updates .madha-updates__card {
+    width: 260px;
+    flex-basis: 260px;
+  }
+  #madha-updates .madha-updates__card:only-child {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #madha-updates .madha-updates__track {
+    animation: none !important;
+  }
+  #madha-updates .madha-updates__viewport {
+    overflow-x: auto;
+  }
+  #madha-updates .madha-updates__card {
+    transition: none;
+  }
+}
+
+
+
+/* ==========================================
+   EVENTS — BOTTOM TO TOP SCROLL ANIMATION
+   ========================================== */
+
+/* Keep both sections aligned */
+#madha-updates {
+    align-items: start;
+}
+
+/* Events viewing window */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__viewport {
+    height: 305px;
+    overflow: hidden;
+    position: relative;
+
+    /* Fade at top and bottom */
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+    );
+}
+
+/* Stack event cards vertically */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__track {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    gap: 16px;
+
+    animation: madha-events-up 28s linear infinite;
+    animation-direction: normal;
+}
+
+/* Event cards fill the column */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__card {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Slightly shorter event images */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Bottom-to-top motion */
+@keyframes madha-events-up {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Pause when hovered or focused */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__viewport:hover
+.madha-updates__track,
+
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__viewport:focus-within
+.madha-updates__track {
+    animation-play-state: paused;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    #madha-updates
+    .madha-updates__group:nth-child(2)
+    .madha-updates__viewport {
+        height: 280px;
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #madha-updates
+    .madha-updates__group:nth-child(2)
+    .madha-updates__track {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    #madha-updates
+    .madha-updates__group:nth-child(2)
+    .madha-updates__viewport {
+        overflow-y: auto;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+}
+
+
+/* ==========================================
+   COMPACT NEWS & EVENTS CARDS
+   ========================================== */
+
+/* Reduce spacing between columns */
+#madha-updates {
+    column-gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 40px;
+}
+
+/* Smaller section headings */
+#madha-updates .madha-updates__header {
+    margin-bottom: 14px;
+}
+
+#madha-updates .madha-updates__header h2 {
+    font-size: clamp(1.5rem, 2vw, 1.9rem);
+}
+
+/* Smaller News cards */
+#madha-updates
+.madha-updates__group:first-child
+.madha-updates__card {
+    flex: 0 0 245px;
+    width: 245px;
+    border-radius: 12px;
+}
+
+/* Smaller News images */
+#madha-updates
+.madha-updates__group:first-child
+.madha-updates__card img {
+    height: 115px;
+    object-fit: cover;
+}
+
+/* Smaller Events cards */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__card {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    border-radius: 12px;
+}
+
+/* Smaller Events images */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__card img {
+    height: 110px;
+    object-fit: cover;
+}
+
+/* Compact text spacing for both */
+#madha-updates .madha-updates__card-body {
+    padding: 12px 14px;
+}
+
+#madha-updates .madha-updates__card time {
+    font-size: 0.67rem;
+}
+
+#madha-updates .madha-updates__card h3 {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin: 5px 0;
+}
+
+#madha-updates .madha-updates__card p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+}
+
+/* Smaller spacing between moving cards */
+#madha-updates .madha-updates__track {
+    gap: 12px;
+}
+
+/* Reduce Events vertical window height */
+#madha-updates
+.madha-updates__group:nth-child(2)
+.madha-updates__viewport {
+    height: 250px;
+}
+
+/* Subtle premium card hover */
+#madha-updates .madha-updates__card {
+    box-shadow: 0 6px 18px rgba(20, 35, 60, 0.06);
+    border-color: #e7dccb;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    #madha-updates {
+        row-gap: 28px;
+        padding: 28px 16px 35px;
+    }
+
+    #madha-updates
+    .madha-updates__group:first-child
+    .madha-updates__card {
+        flex-basis: 220px;
+        width: 220px;
+    }
+
+    #madha-updates
+    .madha-updates__group:nth-child(2)
+    .madha-updates__viewport {
+        height: 225px;
+    }
+}
+
+
+/* NEWS AND EVENTS VIEW DETAILS LINK */
+
+#madha-updates .madha-updates__details {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 12px;
+    padding: 7px 12px;
+
+    background: #fbf4e7;
+    color: #14233c;
+    border: 1px solid #d8bb81;
+    border-radius: 8px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background 0.2s, color 0.2s;
+}
+
+#madha-updates .madha-updates__details:hover,
+#madha-updates .madha-updates__details:focus-visible {
+    background: #14233c;
+    color: #ffffff;
+}
+
+
+
+/* Homepage News & Events department badges */
+
+#madha-updates .madha-updates__card time {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#madha-updates .madha-department {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+
+    margin-left: 8px;
+    padding: 3px 8px;
+
+    border-radius: 20px;
+    background: #f4e9d6;
+    color: #93691b;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+    line-height: 1.3;
+}

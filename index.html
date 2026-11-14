@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap">
   <link rel="preload" as="image" href="assets/img/campus-main-block.jpg">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/news-events.css">
+
+<link rel="stylesheet" href="assets/css/news-header-actions.css">
+
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -44,19 +48,24 @@
           <li class="nav__item has-menu">
             <a class="nav__link" href="about.html">About <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
             <ul class="menu">
-              <li><a href="about.html#college">The College</a></li>
-              <li><a href="about.html#mission">Mission Statement</a></li>
-              <li><a href="about.html#group">Madha Group</a></li>
-              <li><a href="about.html#leadership">Management Team</a></li>
-              <li><a href="about.html#principal">Principal&rsquo;s Office</a></li>
+              <li><a href="college.html">The College</a></li>
+              <li><a href="mission.html">Mission Statement</a></li>
+              <li><a href="leadership.html">Management Team</a></li>
+              <li><a href="principal.html">Principal&rsquo;s Office</a></li>
             </ul>
           </li>
+          <li class="nav__item"><a class="nav__link" href="academics.html">Academics</a></li>
           <li class="nav__item has-menu">
-            <a class="nav__link" href="academics.html">Academics <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <a class="nav__link" href="departments.html">Departments <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
             <ul class="menu">
-              <li><a href="academics.html#programmes">All Programmes</a></li>
-              <li><a href="academics.html#undergraduate">Undergraduate Admissions</a></li>
-              <li><a href="academics.html#postgraduate">Postgraduate Admissions</a></li>
+              <li><a href="department-commerce.html">Commerce</a></li>
+              <li><a href="department-business-administration.html">Business Administration</a></li>
+              <li><a href="department-computer-applications.html">Computer Applications</a></li>
+              <li><a href="department-computer-science.html">Computer Science</a></li>
+              <li><a href="department-biotechnology.html">Biotechnology</a></li>
+              <li><a href="department-mathematics.html">Mathematics</a></li>
+              <li><a href="department-english.html">English</a></li>
+              <li><a href="department-hotel-catering-management.html">Hotel &amp; Catering Management</a></li>
             </ul>
           </li>
           <li class="nav__item"><a class="nav__link" href="campus-life.html">Campus Life</a></li>
@@ -122,7 +131,10 @@
         </div>
       </div>
     </section>
-
+<!-- SQL SERVER: NEWS + EVENTS -->
+<div id="madha-updates" class="madha-updates" aria-label="College news and events">
+  <p class="container">Loading college news and events...</p>
+</div>
     <!-- Programmes -->
     <section class="section section--white" id="programmes" aria-labelledby="prog-title">
       <div class="container">
@@ -149,7 +161,7 @@
             <h3>B.Com (General)</h3>
             <p class="programme__school">Commerce</p>
             <p>Accounting, taxation, business law and finance &mdash; a strong base for careers in commerce, banking and professional qualifications.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="https://sites.google.com/view/b-com-webpage/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-commerce.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="commerce" data-reveal style="--d:.05s">
@@ -157,7 +169,7 @@
             <h3>B.B.A</h3>
             <p class="programme__school">Business Administration</p>
             <p>Management principles, marketing, human resources and entrepreneurship, preparing students for leadership roles and higher study.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="https://sites.google.com/view/bba-webpage/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-business-administration.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="commerce" data-reveal style="--d:.1s">
@@ -165,7 +177,7 @@
             <h3>M.Com</h3>
             <p class="programme__school">Commerce &middot; Postgraduate</p>
             <p>Advanced study in accounting, finance and business research for specialised professional and academic careers.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2 years</span><a href="https://sites.google.com/view/m-com-webpage/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2 years</span><a href="department-commerce.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="computing" data-reveal>
@@ -173,7 +185,7 @@
             <h3>B.C.A</h3>
             <p class="programme__school">Computer Applications</p>
             <p>Programming, databases, networking and software development for careers across the IT industry.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="https://sites.google.com/view/bca-cs-webpage/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-computer-applications.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="computing science" data-reveal style="--d:.05s">
@@ -181,7 +193,7 @@
             <h3>B.Sc Computer Science</h3>
             <p class="programme__school">Computer Science</p>
             <p>Algorithms, data structures, operating systems and programming, built on a sound mathematical foundation.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="https://sites.google.com/view/bca-cs-webpage/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-computer-science.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="science" data-reveal style="--d:.1s">
@@ -189,7 +201,7 @@
             <h3>B.Sc Biotechnology</h3>
             <p class="programme__school">Life Sciences</p>
             <p>Cell biology, genetics, microbiology and biochemistry, applied to healthcare, agriculture and industry.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="https://sites.google.com/view/biotech-masc/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-biotechnology.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="science" data-reveal>
@@ -197,7 +209,7 @@
             <h3>B.Sc Mathematics</h3>
             <p class="programme__school">Mathematical Sciences</p>
             <p>Algebra, calculus, statistics and analysis &mdash; rigorous problem-solving for careers in research, data and teaching.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="contact.html#enquiry">Enquire <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-mathematics.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="humanities" data-reveal style="--d:.05s">
@@ -205,7 +217,7 @@
             <h3>B.A English</h3>
             <p class="programme__school">Humanities</p>
             <p>Literature, language and communication across traditions, building critical reading, writing and expression.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="https://sites.google.com/view/b-a-english-webpage/home" target="_blank" rel="noopener">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-english.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
 
           <article class="programme" data-school="humanities" data-reveal style="--d:.1s">
@@ -213,25 +225,8 @@
             <h3>B.Sc Hotel &amp; Catering Management</h3>
             <p class="programme__school">Hospitality</p>
             <p>Food production, front office, housekeeping and hospitality management for the hotel and tourism sector.</p>
-            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="contact.html#enquiry">Enquire <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+            <div class="programme__foot"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 years</span><a href="department-hotel-catering-management.html">Department <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Principal's message -->
-    <section class="section" aria-labelledby="principal-title">
-      <div class="container message">
-        <div class="message__photo" data-reveal>
-          <img src="assets/img/principal.jpg" alt="Dr. S. Rega, Principal of Madha Arts and Science College" width="900" height="1929" loading="lazy">
-        </div>
-        <div data-reveal style="--d:.1s">
-          <p class="eyebrow" id="principal-title">From the Principal&rsquo;s desk</p>
-          <blockquote>
-            <p class="message__quote">Success today belongs to those who think beyond textbooks, embrace challenges as opportunities, and strive for excellence &mdash; for the future is not something to await; it is something to shape.</p>
-          </blockquote>
-          <div class="message__by"><strong>Dr. S. Rega</strong><span>Principal &middot; M.Sc., PGDESD., M.Phil., Ph.D.</span></div>
-          <a class="link-arrow" href="about.html#principal">Read the full message <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
       </div>
     </section>
@@ -258,25 +253,6 @@
             <span class="pathway__num">PG</span>
             <div><h3>Postgraduate</h3><p>Admission is based on the student&rsquo;s qualifications in their undergraduate course.</p></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Campus life -->
-    <section class="section" aria-labelledby="life-title">
-      <div class="container">
-        <div class="section-head section-head--split" data-reveal>
-          <div>
-            <p class="eyebrow">Campus life</p>
-            <h2 id="life-title">Learning that reaches beyond the classroom</h2>
-            <p class="lead">Celebrations, sport and service to the community are part of everyday life at Madha.</p>
-          </div>
-          <a class="link-arrow" href="campus-life.html">View the gallery <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-        </div>
-        <div class="mosaic">
-          <figure class="tile tile--d" data-reveal><button type="button" data-zoom="Traffic awareness programme with the Greater Chennai Traffic Police"><picture><source media="(max-width: 520px)" srcset="assets/img/phone/outreach-traffic-awareness.jpg"><img src="assets/img/outreach-traffic-awareness.jpg" alt="Students and traffic police officers holding banners at a traffic awareness programme" width="1800" height="656" loading="lazy"></picture></button><figcaption><small>Outreach</small>Traffic awareness programme</figcaption></figure>
-          <figure class="tile tile--e" data-reveal style="--d:.05s"><button type="button" data-zoom="Community relief distribution"><picture><source media="(max-width: 520px)" srcset="assets/img/phone/outreach-relief.jpg"><img src="assets/img/outreach-relief.jpg" alt="College representatives distributing relief packages to members of the community" width="1800" height="656" loading="lazy"></picture></button><figcaption><small>Outreach</small>Community relief distribution</figcaption></figure>
-          <figure class="tile tile--f" data-reveal style="--d:.1s"><button type="button" data-zoom="Cricket practice nets on campus"><picture><source media="(max-width: 520px)" srcset="assets/img/phone/sports-cricket.jpg"><img src="assets/img/sports-cricket.jpg" alt="Cricket practice nets on the college grounds" width="1800" height="656" loading="lazy"></picture></button><figcaption><small>Sport</small>Cricket practice nets</figcaption></figure>
         </div>
       </div>
     </section>
@@ -321,26 +297,6 @@
       </div>
     </section>
 
-    <!-- Madha Group -->
-    <section class="section section--tint" aria-labelledby="group-title">
-      <div class="container split split--reverse">
-        <div class="media-frame" data-reveal>
-          <img src="assets/img/madha-group-campus.jpg" alt="A Madha Group campus with landscaped grounds" width="1400" height="903" loading="lazy">
-        </div>
-        <div data-reveal style="--d:.1s">
-          <p class="eyebrow">Madha Group of Institutions</p>
-          <h2 id="group-title">Part of a family of institutions</h2>
-          <p class="lead">Founded by educationalist and philanthropist Dr. Ln. S. Peter, the Madha Group spans engineering, dentistry, nursing, physiotherapy, management, teacher training and schools.</p>
-          <ul class="checks">
-            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Madha Dental College &amp; Hospital, Kundrathur</span></li>
-            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>St. Lourdes Engineering College, Anakaputhur</span></li>
-            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Madha College of Nursing, Kundrathur</span></li>
-          </ul>
-          <a class="link-arrow" href="about.html#group">All sister institutions <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA -->
     <section class="section" aria-label="Visit the campus">
       <div class="container">
@@ -368,10 +324,10 @@
       <div>
         <h4>Explore</h4>
         <ul class="footer-links">
-          <li><a href="about.html">About the College</a></li>
-          <li><a href="about.html#mission">Mission Statement</a></li>
-          <li><a href="about.html#leadership">Management Team</a></li>
-          <li><a href="about.html#principal">Principal&rsquo;s Office</a></li>
+          <li><a href="college.html">About the College</a></li>
+          <li><a href="mission.html">Mission Statement</a></li>
+          <li><a href="leadership.html">Management Team</a></li>
+          <li><a href="principal.html">Principal&rsquo;s Office</a></li>
           <li><a href="campus-life.html">Campus Life</a></li>
         </ul>
       </div>
@@ -405,5 +361,6 @@
   </dialog>
 
   <script src="assets/js/main.js" defer onerror="document.documentElement.classList.remove('js')"></script>
+  <script src="assets/js/news-events.js" defer></script>
 </body>
 </html>
