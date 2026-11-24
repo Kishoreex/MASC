@@ -2126,3 +2126,240 @@ section:has(#contact-title) .link-arrow {
     }
 }
     
+
+
+
+/* ==========================================
+   COLLEGE NAVBAR — LOGO & BRAND UPDATE
+   ========================================== */
+
+/* Remove Chennai · Est. 2006 line */
+.site-header .brand__sub {
+    display: none !important;
+}
+
+/* Make college logo slightly bigger */
+.site-header .brand img {
+    width: 65px;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* Align college name with bigger logo */
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Keep college name elegant */
+.site-header .brand__name {
+    font-size: 1.32rem;
+    line-height: 1.15;
+}
+
+/* Mobile adjustments */
+@media (max-width: 720px) {
+    .site-header .brand img {
+        width: 52px;
+    }
+
+    .site-header .brand__name {
+        font-size: 1.08rem;
+    }
+
+    .site-header .brand {
+        gap: 9px;
+    }
+}
+
+
+/* ==========================================
+   HOME ABOUT SECTION — AFFILIATION LOGO FIX
+   ========================================== */
+
+/* Make the university affiliation logo more visible */
+.about-badge img,
+.about__badge img,
+.about-affiliation img {
+    width: 56px !important;
+    height: 56px !important;
+    object-fit: contain !important;
+
+    padding: 7px;
+    background: #fffaf0;
+    border: 1px solid rgba(218, 174, 94, 0.7);
+    border-radius: 14px;
+
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* Keep logo and text neatly aligned */
+.about-badge,
+.about__badge,
+.about-affiliation {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+    .about-badge img,
+    .about__badge img,
+    .about-affiliation img {
+        width: 48px !important;
+        height: 48px !important;
+        padding: 6px;
+    }
+}
+
+/* ==========================================
+   HOME ABOUT — PREMIUM AFFILIATION BADGE
+   ========================================== */
+
+.media-frame .media-frame__tag {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 18px;
+    min-width: 280px;
+    max-width: 340px;
+
+    background: #10213e;
+    border: 1px solid rgba(218, 174, 94, 0.28);
+    border-radius: 16px;
+
+    box-shadow: 0 14px 30px rgba(12, 28, 51, 0.20);
+}
+
+/* Light background behind the colorful emblem */
+.media-frame .media-frame__tag > img {
+    display: block;
+    width: 62px !important;
+    height: 62px !important;
+    min-width: 62px;
+
+    padding: 8px;
+    object-fit: contain;
+
+    background: #fffaf0;
+    border: 1px solid #e8d8b7;
+    border-radius: 13px;
+
+    opacity: 1 !important;
+    filter: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Keep the text readable */
+.media-frame .media-frame__tag strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.media-frame .media-frame__tag span {
+    color: #d0d9e8;
+    font-size: 0.78rem;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    .media-frame .media-frame__tag {
+        min-width: 0;
+        max-width: 100%;
+        gap: 11px;
+        padding: 11px 13px;
+    }
+
+    .media-frame .media-frame__tag > img {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px;
+        padding: 7px;
+    }
+
+    .media-frame .media-frame__tag strong {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   HOME ABOUT — CLEAN IVORY AFFILIATION BADGE
+   ========================================== */
+
+/* Remove the navy background completely */
+.media-frame .media-frame__tag {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+
+    min-width: 310px;
+    max-width: 360px;
+    padding: 13px 17px !important;
+
+    background: #fffaf1 !important;
+    border: 1px solid #e8d6b7 !important;
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 12px 32px rgba(20, 35, 60, 0.12) !important;
+}
+
+/* Bigger and clearer logo */
+.media-frame .media-frame__tag > img {
+    display: block !important;
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+
+    padding: 4px !important;
+    object-fit: contain !important;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    filter: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+}
+
+/* Dark navy heading on light background */
+.media-frame .media-frame__tag strong {
+    color: #14233c !important;
+    font-size: 1.08rem !important;
+    line-height: 1.25;
+    margin-bottom: 5px;
+}
+
+/* Subtitle */
+.media-frame .media-frame__tag span {
+    color: #657185 !important;
+    font-size: 0.8rem;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .media-frame .media-frame__tag {
+        min-width: 0;
+        max-width: calc(100% - 20px);
+        gap: 10px !important;
+        padding: 10px 12px !important;
+    }
+
+    .media-frame .media-frame__tag > img {
+        width: 62px !important;
+        height: 62px !important;
+        min-width: 62px !important;
+    }
+
+    .media-frame .media-frame__tag strong {
+        font-size: 0.95rem !important;
+    }
+}
